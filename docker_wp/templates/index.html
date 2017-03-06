@@ -1,2 +1,13 @@
-{% extends "base.html" %}
-{% block head_title %}TaskBuster Django Tutorial{% endblock %}
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+  </head>
+
+  <body>
+    <div class="container" id="container"></div>
+    {% render_bundle 'main' %}
+  </body>
+</html>
