@@ -5,16 +5,11 @@ import Header from './header';
 class PostIndex extends Component {
     render() {
         return (
-            <div className="col-md-12" style={style}>
+            <div className="parent">
                 <Header />
             </div>
         );
     }
-}
-
-const style = {
-    height: 1000,
-    backgroundColor: "blue"
 }
 
 export default PostIndex

@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import {selectView} from '../actions/index'
 
 class MenuItem extends Component {
     render() {
         return (
-            <div className="col-md-2" style={style}>Menu Item</div>
+            <div onClick={() => this.props.selectView(this.props.title)} className="menu-item" >
+                <h6 className="menu-item-text">
+                    {this.props.title}
+                </h6>
+            </div>
         );
     }
 }
 
-const style = {
-    backgroundColor: "orange",
-    height: "100%",
-    width: "20%"
-}
-
-export default MenuItem
+export default connect(null, {selectView})(MenuItem)
