@@ -7,3 +7,6 @@ __pycache__
 *.idea
 
 /node_modules/*
+npm-debug\.log
+
+webpack-stats\.json
