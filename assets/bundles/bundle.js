@@ -64,7 +64,7 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _reducers = __webpack_require__(275);
+	var _reducers = __webpack_require__(276);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -29061,7 +29061,7 @@
 
 	var _reactRedux = __webpack_require__(178);
 
-	var _index = __webpack_require__(277);
+	var _index = __webpack_require__(275);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29106,6 +29106,25 @@
 
 /***/ },
 /* 275 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.selectView = selectView;
+	var CURRENT_VIEW = exports.CURRENT_VIEW = 'CURRENT_VIEW';
+
+	function selectView(view) {
+	    return {
+	        type: CURRENT_VIEW,
+	        payload: view
+	    };
+	}
+
+/***/ },
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29116,7 +29135,7 @@
 
 	var _redux = __webpack_require__(185);
 
-	var _view_reducer = __webpack_require__(276);
+	var _view_reducer = __webpack_require__(277);
 
 	var _view_reducer2 = _interopRequireDefault(_view_reducer);
 
@@ -29129,7 +29148,7 @@
 	exports.default = rootReducer;
 
 /***/ },
-/* 276 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29150,26 +29169,7 @@
 	    }
 	};
 
-	var _index = __webpack_require__(277);
-
-/***/ },
-/* 277 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.selectView = selectView;
-	var CURRENT_VIEW = exports.CURRENT_VIEW = 'CURRENT_VIEW';
-
-	function selectView(view) {
-	    return {
-	        type: CURRENT_VIEW,
-	        payload: view
-	    };
-	}
+	var _index = __webpack_require__(275);
 
 /***/ },
 /* 278 */
