@@ -29,7 +29,7 @@ def get_env_variable(var_name):
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['joelsaunders.herokuapp.com']
 
 
 # Application definition
