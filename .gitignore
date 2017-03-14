@@ -1,7 +1,7 @@
 db.sqlite3
 __pycache__
 
-/webpack-stats
+**/staticfiles/*
 
 # pycharm
 *.idea
