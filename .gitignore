@@ -9,4 +9,4 @@ __pycache__
 /node_modules/*
 npm-debug\.log
 
-webpack-stats\.json
+docker_wp/configs/override\.py
