@@ -1,6 +1,7 @@
 appdirs==1.4.0
 Django==1.10.5
 django-webpack-loader==0.4.1
+djangorestframework==3.6.2
 gunicorn==19.7.0
 packaging==16.8
 psycopg2==2.7.1
