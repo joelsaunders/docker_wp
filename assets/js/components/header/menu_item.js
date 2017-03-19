@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {selectView} from '../actions/index'
+import {selectView} from '../../actions/index'
 
 class MenuItem extends Component {
     render() {

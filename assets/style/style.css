@@ -11,18 +11,18 @@
 
 .parent {
   display: flex;
-  /*border: 5px solid red;*/
   flex-direction: column;
-  width: 100%
+  width: 75%;
+  margin: auto;
+  max-width: 1200px;
+  min-width: 700px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .header {
   display: flex;
-  /*border: 5px solid green;*/
-  margin: auto;
-  width: 75%;
-  max-width: 1200px;
-  min-width: 700px;
+  width: 100%;
   flex-wrap: nowrap;
   background: #ede1e5;
 }
@@ -30,7 +30,6 @@
 .main {
   display: flex;
   margin: auto;
-  /*border: 5px solid green;*/
   flex-direction: column;
   width: 75%;
   max-width: 1200px;
@@ -48,10 +47,8 @@
   display: flex;
   align-items: flex-end;
   width: 20%;
-  /*border: 5px solid blue;*/
   color: white;
   height: 50%;
-  /*justify-content: space-around;*/
 }
 
 .menu-item:nth-child(1) {

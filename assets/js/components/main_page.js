@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Header from './header';
+import Header from './header/header';
 
-class PostIndex extends Component {
+class MainPage extends Component {
     render() {
         return (
             <div className="parent">
@@ -12,4 +12,4 @@ class PostIndex extends Component {
     }
 }
 
-export default PostIndex
+export default MainPage
