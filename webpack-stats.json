@@ -1,1 +1,1 @@
-{"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/home/administrator/projects/docker_wp/assets/bundles/bundle.js"}]},"error":"ModuleNotFoundError","message":"Module not found: Error: Cannot resolve 'file' or 'directory' ../actions/index in /home/administrator/projects/docker_wp/assets/js/components/header"}
+{"status":"done","chunks":{"main":[{"name":"bundle.js","path":"/home/administrator/projects/docker_wp/assets/bundles/bundle.js"}]}}

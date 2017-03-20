@@ -5,7 +5,9 @@ import App from './components/app';
 import MainPage from './components/main_page';
 
 export default (
-    <Route path="/" component={App} >
-        <IndexRoute component={MainPage} />
+    <Route component={App} >
+        <Route path="/" component={MainPage} >
+            <Route > </Route>
+        </Route>
     </Route >
 );
