@@ -11,3 +11,5 @@ npm-debug\.log
 
 docker_wp/configs/override\.py
 
+
+\.vscode/

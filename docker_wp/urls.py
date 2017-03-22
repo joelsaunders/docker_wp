@@ -13,11 +13,13 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from django.conf import settings
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.views.generic.base import RedirectView
 from rest_framework import routers
-from docker_wp.backend import views
 
+from docker_wp.backend import views
 from .views import home
 
 
@@ -30,6 +32,8 @@ router.register(r'posts', views.BlogPostViewSet)
 urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^api/', include(router.urls)),
+    url(r'^api', RedirectView.as_view(url='{}api/'.format(settings.SELF_HOST), permanent=False)),
     url(r'^admin/', admin.site.urls),
+    url(r'^admin', RedirectView.as_view(url='{}admin/'.format(settings.SELF_HOST), permanent=False)),    
     url(r'^(?:.*)/?$', home),
 ]

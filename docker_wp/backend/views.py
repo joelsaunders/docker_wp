@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
 from docker_wp.backend import models
 from rest_framework import viewsets
+from rest_framework import permissions
 
 from docker_wp.backend import serializers
 
@@ -11,6 +12,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = serializers.UserSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class GroupViewSet(viewsets.ModelViewSet):
@@ -19,8 +21,10 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = serializers.GroupSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 
 class BlogPostViewSet(viewsets.ModelViewSet):
     queryset = models.BlogPost.objects.all()
     serializer_class = serializers.BlogPostSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
