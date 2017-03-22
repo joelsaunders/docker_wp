@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import NameBox from './name';
 import MenuItem from './menu_item';
-
-const menuItems = [
-    "Blog", "About", "Music", "Misc", "Contact"
-]
+import menuItems from './menu_item_list';
 
 class Header extends Component {
 
@@ -30,4 +28,4 @@ class Header extends Component {
     }
 }
 
-export default Header
+export default Header;
