@@ -1,8 +1,7 @@
+import dj_database_url
 from .base import *
 
-DATABASES['default']['HOST'] = get_env_variable('DATABASE_PASSWORD')
-DATABASES['default']['NAME'] = get_env_variable('DATABASE_NAME')
-DATABASES['default']['USER'] = get_env_variable('DATABASE_USER')
-DATABASES['default']['PASSWORD'] = get_env_variable('DATABASE_PASSWORD')
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
 DEBUG = False
