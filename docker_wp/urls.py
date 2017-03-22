@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
+    url(r'^(?:.*)/?$', home),
 ]
