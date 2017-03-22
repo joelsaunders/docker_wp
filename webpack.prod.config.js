@@ -16,7 +16,7 @@ module.exports = {
     new BundleTracker({filename: './webpack-stats.json'}),
     new webpack.DefinePlugin({
       'process.env': {
-          BASE_API_URL: JSON.stringify('http://localhost:8000/api/')
+          BASE_API_URL: JSON.stringify('https://joelsaunders.herokuapp.com/api/')
       }
     })
   ],
