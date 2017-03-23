@@ -28277,7 +28277,6 @@
 	    }, {
 	        key: 'render',
 	        value: function render() {
-	            console.log(this.props.posts);
 	            return _react2.default.createElement(
 	                'div',
 	                null,
@@ -28286,31 +28285,40 @@
 	                    { className: 'post-container' },
 	                    this.props.posts.map(function (post) {
 	                        return _react2.default.createElement(
-	                            'li',
-	                            { key: post.title, className: 'post' },
+	                            'div',
+	                            { key: post.title },
 	                            _react2.default.createElement(
-	                                'div',
-	                                { className: 'post-picturecontainer' },
-	                                _react2.default.createElement('img', { src: post.picture, className: 'post-picture' })
+	                                'li',
+	                                { className: 'post' },
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'post-picturecontainer' },
+	                                    _react2.default.createElement('img', { src: post.picture, className: 'post-picture' })
+	                                ),
+	                                _react2.default.createElement(
+	                                    'div',
+	                                    { className: 'post-textarea' },
+	                                    _react2.default.createElement(
+	                                        'h4',
+	                                        null,
+	                                        post.title
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'h5',
+	                                        null,
+	                                        post.created
+	                                    ),
+	                                    _react2.default.createElement(
+	                                        'p',
+	                                        { className: 'post-text' },
+	                                        post.body
+	                                    )
+	                                )
 	                            ),
 	                            _react2.default.createElement(
 	                                'div',
-	                                { className: 'post-textarea' },
-	                                _react2.default.createElement(
-	                                    'h4',
-	                                    null,
-	                                    post.title
-	                                ),
-	                                _react2.default.createElement(
-	                                    'h5',
-	                                    null,
-	                                    post.created
-	                                ),
-	                                _react2.default.createElement(
-	                                    'p',
-	                                    null,
-	                                    post.body
-	                                )
+	                                { className: 'post-border' },
+	                                ' '
 	                            )
 	                        );
 	                    })
@@ -30016,7 +30024,14 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'menu' },
-	                    this.renderMenu()
+	                    _react2.default.createElement('img', {
+	                        className: 'menu-background',
+	                        src: 'https://lh3.googleusercontent.com/kTq_eap-vgLaWLPNLi_xH8-UxHmRE8x0ewBtqNcm2eqwaRsCjwbHeATaoPbDIe9rV4xOyJhJe2_D_Apt6CqT2giAV6ayQ3lTRMuVN7V517MFdDaf52DocrICKFHzMsndYRwRtBrdoWkzOdNXCQtsmEXbIga4btDOJqrQHWwuUOvMGpOEE6F7uL65vBPk3S1iOn-NOOOY9NctHpyyKb1zjD-I4YdT_4q51DNRxdhlSvrng2VF5eLhvZd8tANcgDAGSB_wtbeGm3WVI6zXq1Rqb-vQsX_ydjGje1yAWE0qsK7ph_zktSZmAQPhq-9l9ZmHDF9QhcRfrnfQuvEdnlHZlXzkkJ-m8nfQPfZPxu9KXJkcqVadsi71SSDjIRRUVTIIf4kQnxlkUcarf03lsFzcyUyenc5K1Y7oIkSP5PI5dHa_SfzTyq59Qvg0OKwNFnwAUMx4xdJnIak6NKIp8TIsZjV4VpwcmbOKC3GGGQ3AwMNqTyTvt1-sgXQHeS7XRNQQ-SY6_c8PHK4RDytW3nbBQ9Lja80jyouNE-k1enA9bSYFiiwHuO1m8pR0C7yVws5YL6pGM1nupo8scYj6NS3Rx63tRK5vbknX0m7vaC2kGJG0cmSH0IO0a0VeiUxib9tnu7VOSgUfz0dmtt2_AxalKYio2_N_L14tfv7s3U8S=w640-h182-no' }),
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'menu-item-container' },
+	                        this.renderMenu()
+	                    )
 	                )
 	            );
 	        }

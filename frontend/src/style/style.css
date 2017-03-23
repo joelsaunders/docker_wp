@@ -27,6 +27,7 @@
   width: 100%;
   flex-wrap: nowrap;
   background: #ede1e5;
+  height: 200px;
 }
 
 .main {
@@ -41,8 +42,21 @@
 .menu {
   display: flex;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-end;
+}
+
+.menu-background {
+  height: 65%;
+  width: 100%;
+}
+
+.menu-item-container {
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  width: 100%;
 }
 
 .menu-item {
@@ -50,7 +64,7 @@
   align-items: flex-end;
   width: 20%;
   color: white;
-  height: 50%;
+  height: 100%;
 }
 
 .menu-item:nth-child(1) {
@@ -136,6 +150,11 @@
   width: 50%;
   margin-left: 5px;
   padding: 5px;
+  overflow: hidden;
+}
+
+.post-text {
+  overflow: hidden;
 }
 
 .post-picture {
@@ -144,3 +163,8 @@
   height: 100%;
 }
 
+.post-border {
+  border-top: 1px black;
+  border-top-style: dashed;
+  margin: 0px 4px 0px 4px;
+}

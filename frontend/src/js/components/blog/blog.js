@@ -10,23 +10,25 @@ class BlogIndex extends Component {
     }
 
     render () {
-        console.log(this.props.posts)
         return (
             <div>
                 <ul className="post-container">
                     {
                         this.props.posts.map(post => {
                             return (
-                                <li key={post.title} className="post" >
-                                    <div className="post-picturecontainer">
-                                        <img src={post.picture} className="post-picture" />
-                                    </div>
-                                    <div className="post-textarea">
-                                        <h4>{post.title}</h4>
-                                        <h5>{post.created}</h5>
-                                        <p>{post.body}</p>
-                                    </div>
-                                </li>
+                                <div key={post.title}>
+                                    <li className="post" >
+                                        <div className="post-picturecontainer">
+                                            <img src={post.picture} className="post-picture" />
+                                        </div>
+                                        <div className="post-textarea">
+                                            <h4>{post.title}</h4>
+                                            <h5>{post.created}</h5>
+                                            <p className="post-text">{post.body}</p>
+                                        </div>
+                                    </li>
+                                    <div className="post-border" > </div>
+                                </div>
                             );
                         })
                     }
