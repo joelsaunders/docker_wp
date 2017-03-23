@@ -28282,33 +28282,36 @@
 	                'div',
 	                null,
 	                _react2.default.createElement(
-	                    'h3',
-	                    null,
-	                    'Blog index'
-	                ),
-	                _react2.default.createElement(
 	                    'ul',
-	                    null,
+	                    { className: 'post-container' },
 	                    this.props.posts.map(function (post) {
 	                        return _react2.default.createElement(
 	                            'li',
-	                            { key: post.title },
+	                            { key: post.title, className: 'post' },
 	                            _react2.default.createElement(
-	                                'h4',
-	                                null,
-	                                post.title
+	                                'div',
+	                                { className: 'post-picturecontainer' },
+	                                _react2.default.createElement('img', { src: post.picture, className: 'post-picture' })
 	                            ),
 	                            _react2.default.createElement(
-	                                'h5',
-	                                null,
-	                                post.created
-	                            ),
-	                            _react2.default.createElement(
-	                                'p',
-	                                null,
-	                                post.body
-	                            ),
-	                            _react2.default.createElement('img', { src: post.picture })
+	                                'div',
+	                                { className: 'post-textarea' },
+	                                _react2.default.createElement(
+	                                    'h4',
+	                                    null,
+	                                    post.title
+	                                ),
+	                                _react2.default.createElement(
+	                                    'h5',
+	                                    null,
+	                                    post.created
+	                                ),
+	                                _react2.default.createElement(
+	                                    'p',
+	                                    null,
+	                                    post.body
+	                                )
+	                            )
 	                        );
 	                    })
 	                )
@@ -30102,13 +30105,13 @@
 	            var _this2 = this;
 
 	            return _react2.default.createElement(
-	                'div',
-	                { onClick: function onClick() {
-	                        return _this2.props.selectView(_this2.props.title);
-	                    }, className: 'menu-item' },
+	                _reactRouter.Link,
+	                { to: this.props.title.toLowerCase(), className: 'menu-item', style: { textDecoration: 'none' } },
 	                _react2.default.createElement(
-	                    _reactRouter.Link,
-	                    { to: this.props.title.toLowerCase() },
+	                    'div',
+	                    { onClick: function onClick() {
+	                            return _this2.props.selectView(_this2.props.title);
+	                        } },
 	                    _react2.default.createElement(
 	                        'h6',
 	                        { className: 'menu-item-text' },
