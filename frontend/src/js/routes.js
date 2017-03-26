@@ -13,7 +13,7 @@ import menuItems from './components/header/menu_item_list';
 export default (
     <Route component={App} >
         <Route path="/" component={ MainPage } >
-            <Route path="/blog" component={ BlogIndex } />
+            <Route path="blog" component={ BlogIndex } />
             <Route path="/about" component={ AboutMe } />
             <Route path="/music" component={ Music } />
             <Route path="/misc" component={ Misc } />            
