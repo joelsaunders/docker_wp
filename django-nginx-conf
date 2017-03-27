@@ -3,7 +3,7 @@ upstream django {
     }
 
 server {
-        listen 80;
+        listen 8080;
         server_name localhost;
         gzip off;
 
@@ -12,7 +12,7 @@ server {
         }
 
         location /static/ {
-        alias /home/administrator/projects/docker_wp/docker_wp/staticfiles/;
+        alias /home/administrator/projects/docker_wp/backend_api/docker_wp/staticfiles/;
         }
 
         location /api{
