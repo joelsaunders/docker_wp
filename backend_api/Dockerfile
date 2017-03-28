@@ -2,8 +2,8 @@ FROM python:3.5
 ENV PYTHONUNBUFFERED 1
 RUN mkdir /code
 WORKDIR /code
-ADD . /code/
+ADD ./requirements.txt /code/
 RUN pip install -r requirements.txt
-RUN chmod +x ./deploy.sh
-RUN ./deploy.sh development
-ADD . /code/
+# RUN chmod +x ./deploy.sh
+# RUN ./deploy.sh development
+# VOLUME . /code/

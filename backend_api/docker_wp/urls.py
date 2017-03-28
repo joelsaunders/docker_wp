@@ -20,7 +20,6 @@ from django.views.generic.base import RedirectView
 from rest_framework import routers
 
 from docker_wp.backend import views
-from .views import home
 
 
 router = routers.DefaultRouter()
@@ -30,10 +29,8 @@ router.register(r'posts', views.BlogPostViewSet)
 
 
 urlpatterns = [
-    url(r'^$', home, name='home'),
     url(r'^api/', include(router.urls)),
     url(r'^api', RedirectView.as_view(url='{}api/'.format(settings.SELF_HOST), permanent=False)),
     url(r'^admin/', admin.site.urls),
     url(r'^admin', RedirectView.as_view(url='{}admin/'.format(settings.SELF_HOST), permanent=False)),    
-    url(r'^(?:.*)/?$', home),
 ]
