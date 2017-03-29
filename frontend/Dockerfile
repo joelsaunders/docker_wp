@@ -1,5 +1,13 @@
-FROM nginx
+FROM node:7.7.4
 
-COPY nginx.conf /etc/nginx/nginx.conf
+WORKDIR /tmp
+COPY ./package.json /tmp/
+RUN npm install
 
-# COPY . /usr/share/nginx/html
+RUN mkdir /code/
+WORKDIR /code
+COPY . /code/
+RUN cp -a /tmp/node_modules /code/
+
+CMD ["npm", "start"]
+EXPOSE 8000
