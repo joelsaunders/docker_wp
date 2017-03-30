@@ -8,8 +8,8 @@ services:
     command: python manage.py runserver 0.0.0.0:8080
     volumes:
       - ./backend_api:/code
-    # ports:
-    #   - "8000:8000"
+    ports:
+      - "8000:8080"
     expose: 
       - "8080"
     depends_on:
@@ -24,7 +24,7 @@ services:
     depends_on:
       - web
     links:
-      - "web:backend"
+      - "web"
     command: >
         sh -c '
         if test -d node_modules;

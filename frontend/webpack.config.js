@@ -7,7 +7,7 @@ module.exports = Object.assign(config, {
     plugins: [
         new webpack.DefinePlugin({
             'process.env': {
-                BASE_API_URL: JSON.stringify('backend:8080/api/')
+                BASE_API_URL: JSON.stringify('http://0.0.0.0:8000/api/')
             }
         })
     ],
