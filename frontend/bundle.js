@@ -23746,28 +23746,30 @@
 	    func = _React$PropTypes.func,
 	    object = _React$PropTypes.object;
 
+
+	var propTypes = {
+	  history: object,
+	  children: _InternalPropTypes.routes,
+	  routes: _InternalPropTypes.routes, // alias for children
+	  render: func,
+	  createElement: func,
+	  onError: func,
+	  onUpdate: func,
+
+	  // PRIVATE: For client-side rehydration of server match.
+	  matchContext: object
+	};
+
 	/**
 	 * A <Router> is a high-level API for automatically setting up
 	 * a router that renders a <RouterContext> with all the props
 	 * it needs each time the URL changes.
 	 */
-
 	var Router = _react2.default.createClass({
 	  displayName: 'Router',
 
 
-	  propTypes: {
-	    history: object,
-	    children: _InternalPropTypes.routes,
-	    routes: _InternalPropTypes.routes, // alias for children
-	    render: func,
-	    createElement: func,
-	    onError: func,
-	    onUpdate: func,
-
-	    // PRIVATE: For client-side rehydration of server match.
-	    matchContext: object
-	  },
+	  propTypes: propTypes,
 
 	  getDefaultProps: function getDefaultProps() {
 	    return {
@@ -23864,7 +23866,7 @@
 
 	    // Only forward non-Router-specific props to routing context, as those are
 	    // the only ones that might be custom routing context props.
-	    Object.keys(Router.propTypes).forEach(function (propType) {
+	    Object.keys(propTypes).forEach(function (propType) {
 	      return delete props[propType];
 	    });
 
@@ -24310,31 +24312,29 @@
 	      changeRoutes = void 0,
 	      enterRoutes = void 0;
 	  if (prevRoutes) {
-	    (function () {
-	      var parentIsLeaving = false;
-	      leaveRoutes = prevRoutes.filter(function (route) {
-	        if (parentIsLeaving) {
-	          return true;
-	        } else {
-	          var isLeaving = nextRoutes.indexOf(route) === -1 || routeParamsChanged(route, prevState, nextState);
-	          if (isLeaving) parentIsLeaving = true;
-	          return isLeaving;
-	        }
-	      });
+	    var parentIsLeaving = false;
+	    leaveRoutes = prevRoutes.filter(function (route) {
+	      if (parentIsLeaving) {
+	        return true;
+	      } else {
+	        var isLeaving = nextRoutes.indexOf(route) === -1 || routeParamsChanged(route, prevState, nextState);
+	        if (isLeaving) parentIsLeaving = true;
+	        return isLeaving;
+	      }
+	    });
 
-	      // onLeave hooks start at the leaf route.
-	      leaveRoutes.reverse();
+	    // onLeave hooks start at the leaf route.
+	    leaveRoutes.reverse();
 
-	      enterRoutes = [];
-	      changeRoutes = [];
+	    enterRoutes = [];
+	    changeRoutes = [];
 
-	      nextRoutes.forEach(function (route) {
-	        var isNew = prevRoutes.indexOf(route) === -1;
-	        var paramsChanged = leaveRoutes.indexOf(route) !== -1;
+	    nextRoutes.forEach(function (route) {
+	      var isNew = prevRoutes.indexOf(route) === -1;
+	      var paramsChanged = leaveRoutes.indexOf(route) !== -1;
 
-	        if (isNew || paramsChanged) enterRoutes.push(route);else changeRoutes.push(route);
-	      });
-	    })();
+	      if (isNew || paramsChanged) enterRoutes.push(route);else changeRoutes.push(route);
+	    });
 	  } else {
 	    leaveRoutes = [];
 	    changeRoutes = [];
@@ -24828,8 +24828,6 @@
 
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 	exports.default = matchRoutes;
 
 	var _AsyncUtils = __webpack_require__(218);
@@ -24978,38 +24976,32 @@
 	    // By assumption, pattern is non-empty here, which is the prerequisite for
 	    // actually terminating a match.
 	    if (remainingPathname === '') {
-	      var _ret = function () {
-	        var match = {
-	          routes: [route],
-	          params: createParams(paramNames, paramValues)
-	        };
+	      var match = {
+	        routes: [route],
+	        params: createParams(paramNames, paramValues)
+	      };
 
-	        getIndexRoute(route, location, paramNames, paramValues, function (error, indexRoute) {
-	          if (error) {
-	            callback(error);
-	          } else {
-	            if (Array.isArray(indexRoute)) {
-	              var _match$routes;
+	      getIndexRoute(route, location, paramNames, paramValues, function (error, indexRoute) {
+	        if (error) {
+	          callback(error);
+	        } else {
+	          if (Array.isArray(indexRoute)) {
+	            var _match$routes;
 
-	              ({"BASE_API_URL":"http://0.0.0.0:8000/api/"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(indexRoute.every(function (route) {
-	                return !route.path;
-	              }), 'Index routes should not have paths') : void 0;
-	              (_match$routes = match.routes).push.apply(_match$routes, indexRoute);
-	            } else if (indexRoute) {
-	              ({"BASE_API_URL":"http://0.0.0.0:8000/api/"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(!indexRoute.path, 'Index routes should not have paths') : void 0;
-	              match.routes.push(indexRoute);
-	            }
-
-	            callback(null, match);
+	            ({"BASE_API_URL":"http://0.0.0.0:8000/api/"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(indexRoute.every(function (route) {
+	              return !route.path;
+	            }), 'Index routes should not have paths') : void 0;
+	            (_match$routes = match.routes).push.apply(_match$routes, indexRoute);
+	          } else if (indexRoute) {
+	            ({"BASE_API_URL":"http://0.0.0.0:8000/api/"}).NODE_ENV !== 'production' ? (0, _routerWarning2.default)(!indexRoute.path, 'Index routes should not have paths') : void 0;
+	            match.routes.push(indexRoute);
 	          }
-	        });
 
-	        return {
-	          v: void 0
-	        };
-	      }();
+	          callback(null, match);
+	        }
+	      });
 
-	      if ((typeof _ret === 'undefined' ? 'undefined' : _typeof(_ret)) === "object") return _ret.v;
+	      return;
 	    }
 	  }
 
@@ -25516,11 +25508,6 @@
 	 * You could use the following component to link to that route:
 	 *
 	 *   <Link to={`/posts/${post.id}`} />
-	 *
-	 * Links may pass along location state and/or query string parameters
-	 * in the state/query props, respectively.
-	 *
-	 *   <Link ... query={{ show: true }} state={{ the: 'state' }} />
 	 */
 	var Link = _react2.default.createClass({
 	  displayName: 'Link',
@@ -25534,9 +25521,6 @@
 
 	  propTypes: {
 	    to: oneOfType([string, object, func]),
-	    query: object,
-	    hash: string,
-	    state: object,
 	    activeStyle: object,
 	    activeClassName: string,
 	    onlyActiveOnIndex: bool.isRequired,
@@ -27762,12 +27746,7 @@
 	'use strict';
 
 	exports.__esModule = true;
-
-	exports.default = function (createHistory) {
-	  var history = void 0;
-	  if (canUseDOM) history = (0, _useRouterHistory2.default)(createHistory)();
-	  return history;
-	};
+	exports.default = createRouterHistory;
 
 	var _useRouterHistory = __webpack_require__(248);
 
@@ -27777,6 +27756,11 @@
 
 	var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
+	function createRouterHistory(createHistory) {
+	  var history = void 0;
+	  if (canUseDOM) history = (0, _useRouterHistory2.default)(createHistory)();
+	  return history;
+	}
 	module.exports = exports['default'];
 
 /***/ },
