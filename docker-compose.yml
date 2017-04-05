@@ -33,6 +33,5 @@ services:
         else
             cp -a /tmp/node_modules /code/;
         fi &&
-        ./node_modules/.bin/webpack --config webpack.config.js &&
         npm install && npm start
         '
