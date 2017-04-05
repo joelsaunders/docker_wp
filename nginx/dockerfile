@@ -1,0 +1,19 @@
+from nginx:1.11.9
+
+expose 80
+
+run rm -fr /var/www
+
+run mkdir -p /var/www
+
+workdir /etc/nginx
+
+run rm nginx.conf
+
+copy ./ /etc/nginx/
+
+run mv www/* /var/www
+
+run rm -fr www
+
+cmd ["nginx"]

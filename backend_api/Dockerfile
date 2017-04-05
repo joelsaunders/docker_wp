@@ -7,4 +7,5 @@ RUN pip install -r requirements.txt
 COPY . /code/
 # RUN chmod +x ./deploy.sh
 # RUN ./deploy.sh development
+EXPOSE 8000
 CMD ["gunicorn", "docker_wp.wsgi"]

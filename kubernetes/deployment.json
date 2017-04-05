@@ -1,0 +1,36 @@
+{
+	"apiVersion": "extensions/v1beta1",
+	"kind": "Deployment",
+	"metadata": {
+		"name": "main"
+	},
+	"spec": {
+		"replicas": 1,
+		"template": {
+			"metadata": {
+				"labels": {
+					"name": "main"
+				}
+			},
+			"spec": {
+				"containers": [{
+					"env": [{
+						"name": "SECRET_KEY",
+						"value": "cG90YXRv"
+					}],
+					"image": "",
+					"name": "back-end",
+					"ports": [{
+						"containerPort": 8000
+					}]
+				}, {
+					"image": "",
+					"name": "front-end",
+					"ports": [{
+						"containerPort": 80
+					}]
+				}]
+			}
+		}
+	}
+}
