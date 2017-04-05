@@ -14,8 +14,7 @@ services:
       - "8080"
     depends_on:
       - db
-  nginx:
-    # image: nginx
+  frontend:
     build: ./frontend
     ports:
       - "80:8000"
