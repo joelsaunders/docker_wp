@@ -4,6 +4,7 @@ RUN mkdir /code
 WORKDIR /code
 ADD ./requirements.txt /code/
 RUN pip install -r requirements.txt
+COPY . /code/
 # RUN chmod +x ./deploy.sh
 # RUN ./deploy.sh development
-# VOLUME . /code/
+CMD ["gunicorn", "docker_wp.wsgi"]

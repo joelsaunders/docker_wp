@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --progress --colors",
-    "build-prod": "webpack --config webpack.prod.config.js --progress --colors",
+    "build-prod": "webpack --config webpack.prod.config.js --progress --colors && cp ./index.html dist/index.html && mkdir -p ./dist/src/style && cp ./src/style/style.css ./dist/src/style/style.css",
     "watch": "webpack --config webpack.local.config.js --watch",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --content-base ."
   },
