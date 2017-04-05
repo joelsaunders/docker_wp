@@ -14,7 +14,7 @@ module.exports = Object.assign(config, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        BASE_API_URL: JSON.stringify('https://joelsaunders.herokuapp.com/api/')
+        BASE_API_URL: JSON.stringify('http://127.0.0.1:8000/api/')
       }
     }),
     // new HtmlWebpackPlugin(),
