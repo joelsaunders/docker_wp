@@ -24,7 +24,7 @@
 						"containerPort": 8000
 					}]
 				}, {
-					"image": "eu.gcr.io/beaming-might-163819/frontend-0.0.5",
+					"image": "eu.gcr.io/beaming-might-163819/frontend-0.0.6",
 					"name": "front-end",
 					"ports": [{
 						"containerPort": 80
