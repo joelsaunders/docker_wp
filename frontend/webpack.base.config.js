@@ -13,7 +13,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-          BASE_API_URL: JSON.stringify('http://localhost:8000/api/')
+          BASE_API_URL: JSON.stringify('http://localhost:80/api/')
       }
     })
   ],
