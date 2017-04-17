@@ -1,6 +1,6 @@
 version: '2'
 services:
-  db:
+  postgres:
     image: postgres
   web:
     env_file: .env
@@ -13,7 +13,7 @@ services:
     expose: 
       - "8080"
     depends_on:
-      - db
+      - postgres
   frontend:
     build: ./frontend
     ports:
