@@ -5,7 +5,7 @@ WORKDIR /code
 ADD ./requirements.txt /code/
 RUN pip install -r requirements.txt
 COPY . /code/
-# RUN chmod +x ./deploy.sh
-# RUN ./deploy.sh development
+RUN chmod +x ./deploy.sh
+RUN ./deploy.sh production
 EXPOSE 8000
 CMD ["gunicorn", "docker_wp.wsgi"]
