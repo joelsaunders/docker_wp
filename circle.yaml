@@ -1,4 +1,17 @@
-machine:
-    services:
-        - docker
-    
+version: 2
+   
+jobs:
+  build:
+    docker:
+      - image: ubuntu:12.04
+    working_directory: ~/code
+    steps:
+      - checkout
+
+      - setup_remote_docker
+
+      - run: |
+        ./build_frontend.sh
+
+
+
