@@ -3,7 +3,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:12.04
+      - image: python:3.5.2
     working_directory: ~/code
     steps:
       - checkout
