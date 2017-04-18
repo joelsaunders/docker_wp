@@ -11,7 +11,7 @@ jobs:
       - setup_remote_docker
 
       - run: |
-        ./build_frontend.sh
+          ./build_frontend.sh
 
 
 
