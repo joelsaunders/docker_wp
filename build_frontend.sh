@@ -1,20 +1,29 @@
 #!/usr/bin/env bash
 set -e
 
-export commit=`git rev-parse HEAD`
+export COMMIT=`git rev-parse HEAD`
+export BASE_TAG="eu.gcr.io/beaming-might-163819"
 
-export tag="eu.gcr.io/beaming-might-163819/frontend-$commit"
+export FRONTEND_TAG=$BASE_TAG/frontend-$COMMIT
+export BACKEND_TAG=$BASE_TAG/backend-$COMMIT
+export NGINX_TAG=$BASE_TAG/proxy-$COMMIT
 
-docker build -t $tag -q ./frontend
-
+echo "building frontend image"
+docker build -t $FRONTEND_TAG -q ./frontend
 rm -rf nginx/www
-
 mkdir -p nginx/www/src
-
 cp -a frontend/src/style nginx/www/src
 cp -a frontend/index.html nginx/www
+docker run --entrypoint cat --rm $FRONTEND_TAG /code/dist/bundle.js > nginx/www/bundle.js
+echo "frontend build finished"
+echo "$FRONTEND_TAG"
 
-docker run --entrypoint cat --rm $tag /code/dist/bundle.js > nginx/www/bundle.js
+echo "building nginx image"
+docker build -t $NGINX_TAG -q ./nginx
+echo "finished building nginx image"
+echo "$NGINX_TAG"
 
-echo "build finished"
-echo "$tag"
+echo "building backend image"
+docker build -t $BACKEND_TAG -q ./backend_api
+echo "finished building backend image"
+echo "$BACKEND_TAG"
