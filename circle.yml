@@ -1,8 +1,6 @@
 machine:
   services:
     - docker
-  environment:
-    - GSDK: /opt/google-cloud-sdk
 
 dependencies:
   pre:
