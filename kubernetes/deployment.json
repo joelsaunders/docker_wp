@@ -1,0 +1,46 @@
+{
+	"apiVersion": "extensions/v1beta1",
+	"kind": "Deployment",
+	"metadata": {
+		"name": "main"
+	},
+	"spec": {
+		"replicas": 1,
+		"template": {
+			"metadata": {
+				"labels": {
+					"name": "main"
+				}
+			},
+			"spec": {
+				"containers": [{
+					"env": [{
+						"name": "SECRET_KEY",
+						"value": "cG90YXRv"
+					}],
+					"image": "eu.gcr.io/beaming-might-163819/backend-0.0.4",
+					"name": "back-end",
+					"ports": [{
+						"containerPort": 8000
+					}]
+				}, {
+					"image": "eu.gcr.io/beaming-might-163819/frontend-0.0.6",
+					"name": "front-end",
+					"ports": [{
+						"containerPort": 80
+					}],
+					"resources": {
+						"requests": {
+							"cpu": "50m",
+							"memory": "150Mi"
+						},
+						"limits": {
+							"cpu": "300m",
+							"memory": "500Mi"
+						}
+					}
+				}]
+			}
+		}
+	}
+}

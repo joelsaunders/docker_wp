@@ -12,6 +12,7 @@ module.exports = Object.assign(config, {
         })
     ],
     devServer: {
+        historyApiFallback: true,
         host: '0.0.0.0',
         port: 8000,
     }

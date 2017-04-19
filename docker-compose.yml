@@ -1,6 +1,6 @@
 version: '2'
 services:
-  db:
+  postgres:
     image: postgres
   web:
     env_file: .env
@@ -13,7 +13,7 @@ services:
     expose: 
       - "8080"
     depends_on:
-      - db
+      - postgres
   frontend:
     build: ./frontend
     ports:
@@ -32,6 +32,5 @@ services:
         else
             cp -a /tmp/node_modules /code/;
         fi &&
-        ./node_modules/.bin/webpack --config webpack.config.js &&
         npm install && npm start
         '

@@ -1,0 +1,22 @@
+machine:
+  services:
+    - docker
+  environment:
+    commit: $CIRCLE_SHA1
+    tag: "eu.gcr.io/beaming-might-163819/frontend-$commit"
+
+dependencies:
+  cache_directories:
+    - ~/docker
+  override:
+    - if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
+    - mkdir -p ~/docker
+    - ./build_frontend.sh
+    - docker save $tag > ~/docker/frontend.tar
+
+deployment:
+  staging:
+    branch: [/.*/]
+    commands:
+      - ./deploy.sh $ENVIRONMENT deploy
+

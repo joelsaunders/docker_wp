@@ -31,7 +31,7 @@ def get_env_variable(var_name):
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ['joelsaunders.herokuapp.com', 'localhost', '0.0.0.0']
+ALLOWED_HOSTS = ['joelsaunders.herokuapp.com', 'localhost', '0.0.0.0', '35.187.59.182']
 
 
 # Application definition
@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres',
-        'HOST': 'db',
+        'HOST': 'postgres',
         'PORT': 5432,
     }
 }
