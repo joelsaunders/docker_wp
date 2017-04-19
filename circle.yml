@@ -3,8 +3,11 @@ machine:
     - docker
 
 dependencies:
-  pre:
+  override:
+    - if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
+    - mkdir -p ~/docker
     - ./build_frontend.sh
+    - docker save $tag > ~/docker/frontend.tar
 
 deployment:
   staging:
