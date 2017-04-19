@@ -1,4 +1,4 @@
-FROM node:7.7.4
+FROM node:7.7.4-alpine
 
 WORKDIR /tmp
 COPY ./package.json /tmp/

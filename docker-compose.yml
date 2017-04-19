@@ -1,7 +1,7 @@
 version: '2'
 services:
   postgres:
-    image: postgres
+    image: postgres:alpine
   web:
     env_file: .env
     build: ./backend_api
