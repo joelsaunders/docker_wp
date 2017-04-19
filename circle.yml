@@ -6,6 +6,8 @@ machine:
     tag: "eu.gcr.io/beaming-might-163819/frontend-$commit"
 
 dependencies:
+  cache_directories:
+    - ~/docker
   override:
     - if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
     - mkdir -p ~/docker
