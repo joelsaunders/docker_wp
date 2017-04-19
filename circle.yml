@@ -1,17 +1,9 @@
-version: 2
-   
-jobs:
-  build:
-    docker:
-      - image: python:3.5.2
-    working_directory: ~/code
-    steps:
-      - checkout
+machine:
+  services:
+    - docker
 
-      - setup_remote_docker
-
-      - run: |
-          ./build_frontend.sh
-
+dependencies:
+  pre:
+    - ./build_frontend.sh
 
 
