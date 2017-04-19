@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-export commit=`git rev-parse --short HEAD`
+export commit=`git rev-parse HEAD`
 
 export tag="eu.gcr.io/beaming-might-163819/frontend-$commit"
 
