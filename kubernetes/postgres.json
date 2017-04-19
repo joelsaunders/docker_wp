@@ -1,0 +1,51 @@
+{
+	"apiVersion": "extensions/v1beta1",
+	"kind": "Deployment",
+	"metadata": {
+		"name": "postgres"
+	},
+	"spec": {
+		"replicas": 1,
+		"template": {
+			"metadata": {
+				"labels": {
+					"name": "postgres"
+				}
+			},
+			"spec": {
+				"containers": [{
+					"env": [{
+						"name": "PGDATA",
+						"value": "/var/lib/postgresql/data/pgdata"
+					}],
+					"image": "postgres",
+					"name": "postgres-pod",
+					"ports": [{
+						"containerPort": 5432
+					}],
+                    "volumeMounts": [{
+                        "name": "postgresdata",
+                        "mountPath": "/var/lib/postgresql/data"
+                    }],
+					"resources": {
+						"requests": {
+							"cpu": "50m",
+							"memory": "150Mi"
+							},
+						"limits": {
+							"cpu": "300m",
+							"memory":"400Mi"
+							}
+						}
+				}],
+                "volumes": [{
+                    "name": "postgresdata",
+                    "gcePersistentDisk": {
+                        "pdName": "pg-data",
+                        "fsType": "ext4"
+                    }
+                }]
+			}
+		}
+	}
+}

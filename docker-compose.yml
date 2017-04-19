@@ -1,0 +1,36 @@
+version: '2'
+services:
+  postgres:
+    image: postgres
+  web:
+    env_file: .env
+    build: ./backend_api
+    command: python manage.py runserver 0.0.0.0:8080
+    volumes:
+      - ./backend_api:/code
+    ports:
+      - "8000:8080"
+    expose: 
+      - "8080"
+    depends_on:
+      - postgres
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:8000"
+    volumes:
+      - ./frontend/:/code/
+    depends_on:
+      - web
+    links:
+      - "web"
+    command: >
+        sh -c '
+        if test -d node_modules;
+        then
+            echo node_modules_exists ;
+        else
+            cp -a /tmp/node_modules /code/;
+        fi &&
+        npm install && npm start
+        '

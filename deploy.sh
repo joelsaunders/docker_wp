@@ -8,7 +8,7 @@ npm install
 fi
 
 echo "Write configs"
-python docker_wp/configs/configurator.py $1
+python backend_api/docker_wp/configs/configurator.py $1
 
 
 if [ "$1" == 'production' ]; then

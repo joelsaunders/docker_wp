@@ -6,7 +6,7 @@ __pycache__
 # pycharm
 *.idea
 
-/node_modules/*
+frontend/node_modules/*
 npm-debug\.log
 
 docker_wp/configs/override\.py

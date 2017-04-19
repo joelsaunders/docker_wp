@@ -4,7 +4,7 @@ export default () => {
     return (
         <div>
             <h3>Contact</h3>
-            <p>Contact info here</p>
+            <p>Contact info here!!!</p>
         </div>
     );
 }

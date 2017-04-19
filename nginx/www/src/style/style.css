@@ -1,0 +1,170 @@
+.container {
+    width: 100%;
+    min-width: 75%
+}
+
+.app {
+  /*border: 5px solid pink;*/
+  width: 100%;
+  height: 100%
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  max-width: 1000px;
+  min-width: 700px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*Header*/
+
+.header {
+  display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  background: #ede1e5;
+  height: 200px;
+}
+
+.main {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 75%;
+  /*max-width: 800px;*/
+  /*min-width: 700px;*/
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-background {
+  height: 65%;
+  width: 100%;
+}
+
+.menu-item-container {
+  height: 35%;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  width: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: flex-end;
+  width: 20%;
+  color: white;
+  height: 100%;
+}
+
+.menu-item:nth-child(1) {
+  background: #383838;
+}
+
+.menu-item:nth-child(2) {
+  background: #4f4f4f;
+}
+
+.menu-item:nth-child(3) {
+  background: #666666;
+}
+
+.menu-item:nth-child(4) {
+  background: #878787;
+}
+
+.menu-item:nth-child(5) {
+  background: #afafaf;
+}
+
+.menu-item:hover {
+  opacity: 0.95;
+}
+
+.menu-item-text {
+  margin-left: 7%;
+  color: white !important;
+  text-decoration:none !important;
+}
+
+.menu-name {
+  height: 200px;
+  min-width: 200px;
+  max-width: 300px;
+  background: black;
+  color: white;
+}
+
+.m1 {
+  font-weight: bold;
+  margin-left: 10%;
+  margin-right: 10%;
+  /*width: 100%*/
+}
+
+.fulljustify {
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.fulljustify:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+/*Body*/
+
+/*BlogPost*/
+
+.post-container {
+  list-style-type: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.post {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+  height: 350px;
+  background: #e3e3e3;
+}
+
+.post-picturecontainer {
+  width: 50%;
+  margin-right: 5px;
+  padding: 0;
+}
+
+.post-textarea {
+  width: 50%;
+  margin-left: 5px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.post-text {
+  overflow: hidden;
+}
+
+.post-picture {
+  width:100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.post-border {
+  border-top: 1px black;
+  border-top-style: dashed;
+  margin: 0px 4px 0px 4px;
+}

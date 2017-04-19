@@ -1,1 +1,0 @@
-web: gunicorn docker_wp.wsgi
