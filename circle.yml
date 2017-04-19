@@ -1,9 +1,16 @@
 machine:
   services:
     - docker
+  environment:
+    - GSDK: /opt/google-cloud-sdk
 
 dependencies:
   pre:
     - ./build_frontend.sh
 
+deployment:
+  staging:
+    branch: [/.*/]
+    commands:
+      - ./deploy.sh $ENVIRONMENT deploy
 

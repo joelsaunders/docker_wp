@@ -7,7 +7,7 @@ export version=`cat frontend/version.txt`
 
 export tag="eu.gcr.io/beaming-might-163819/frontend-$version-$commit"
 
-docker build -t $tag ./frontend
+docker build -t $tag -q ./frontend
 
 rm -rf nginx/www
 
