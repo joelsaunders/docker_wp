@@ -3,9 +3,7 @@ set -e
 
 export commit=`git rev-parse --short HEAD`
 
-export version=`cat frontend/version.txt`
-
-export tag="eu.gcr.io/beaming-might-163819/frontend-$version-$commit"
+export tag="eu.gcr.io/beaming-might-163819/frontend-$commit"
 
 docker build -t $tag -q ./frontend
 

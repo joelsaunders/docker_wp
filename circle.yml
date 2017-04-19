@@ -2,11 +2,8 @@ machine:
   services:
     - docker
   environment:
-    commit: 
-      - git rev-parse --short HEAD
-    version: 
-      - cat frontend/version.txt
-    tag: "eu.gcr.io/beaming-might-163819/frontend-$version-$commit"
+    commit: $CIRCLE_SHA1
+    tag: "eu.gcr.io/beaming-might-163819/frontend-$commit"
 
 dependencies:
   override:
