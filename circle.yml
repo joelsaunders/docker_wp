@@ -30,12 +30,12 @@ dependencies:
     #- docker save $FRONTEND_TAG > ~/docker/frontend.tar
     #- docker save $FRONTEND_TAG > ~/docker/backend.tar
     #- docker save $FRONTEND_TAG > ~/docker/frontend.tar
-    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/frontend_cache ./frontend
-    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/backend_cache ./backend_api
-    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/nginx_cache ./nginx    
-    - sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/frontend_cache
-    - sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/backend_cache
-    - sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/nginx_cache
+    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/frontend_cache ./frontend &&
+     sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/backend_cache ./backend_api &&
+     sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/nginx_cache ./nginx &&
+     sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/frontend_cache &&
+     sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/backend_cache &&
+     sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/nginx_cache
 deployment:
   staging:
     branch: [/.*/]
