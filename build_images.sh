@@ -5,9 +5,9 @@ set -e
 export COMMIT=`git rev-parse HEAD`
 export BASE_TAG="eu.gcr.io/beaming-might-163819"
 
-export FRONTEND_TAG=$BASE_TAG/frontend-$COMMIT
-export BACKEND_TAG=$BASE_TAG/backend-$COMMIT
-export NGINX_TAG=$BASE_TAG/nginx-$COMMIT
+export FRONTEND_TAG=$BASE_TAG/frontend:$COMMIT
+export BACKEND_TAG=$BASE_TAG/backend:$COMMIT
+export NGINX_TAG=$BASE_TAG/nginx:$COMMIT
 
 echo "building frontend image"
 docker build -t $FRONTEND_TAG -q ./frontend
