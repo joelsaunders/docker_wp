@@ -30,7 +30,7 @@ dependencies:
     #- if [[ -e ~/docker/backend.tar ]]; then docker load -i ~/docker/backend.tar; fi
     #- if [[ -e ~/docker/ngninx.tar ]]; then docker load -i ~/docker/nginx.tar; fi        
     - mkdir -p ~/docker
-    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/frontend:$CIRCLE_COMMIT
+    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/frontend:$CIRCLE_COMMIT ./frontend
     #- ./build_images.sh
     #- docker save $FRONTEND_TAG > ~/docker/frontend.tar
     #- docker save $FRONTEND_TAG > ~/docker/backend.tar
