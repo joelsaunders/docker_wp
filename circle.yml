@@ -2,8 +2,11 @@ machine:
   services:
     - docker
   environment:
-    commit: $CIRCLE_SHA1
-    tag: "eu.gcr.io/beaming-might-163819/frontend-$commit"
+    COMMIT: $CIRCLE_SHA1
+    BASE_TAG: "eu.gcr.io/beaming-might-163819"
+    FRONTEND_TAG: "$BASE_TAG/frontend-$commit"
+    BACKEND_TAG: "$BASE_TAG/backend-$commit"
+    NGINX_TAG: "$BASE_TAG/nginx-$commit"
 
 dependencies:
   cache_directories:
@@ -11,8 +14,8 @@ dependencies:
   override:
     - if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
     - mkdir -p ~/docker
-    - ./build_frontend.sh
-    - docker save $tag > ~/docker/frontend.tar
+    - ./build_images.sh
+    - docker save $FRONTEND_TAG > ~/docker/frontend.tar
 
 deployment:
   staging:

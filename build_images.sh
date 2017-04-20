@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -e
 
+# Also set up tags here for local building, should be the same as env vars exported in circle.yml
 export COMMIT=`git rev-parse HEAD`
 export BASE_TAG="eu.gcr.io/beaming-might-163819"
 
 export FRONTEND_TAG=$BASE_TAG/frontend-$COMMIT
 export BACKEND_TAG=$BASE_TAG/backend-$COMMIT
-export NGINX_TAG=$BASE_TAG/proxy-$COMMIT
+export NGINX_TAG=$BASE_TAG/nginx-$COMMIT
 
 echo "building frontend image"
 docker build -t $FRONTEND_TAG -q ./frontend
