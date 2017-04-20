@@ -12,9 +12,9 @@ dependencies:
   cache_directories:
     - ~/docker
   override:
-    - if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
-    - if [[ -e ~/docker/backend.tar ]]; then docker load -i ~/docker/backend.tar; fi
-    - if [[ -e ~/docker/ngninx.tar ]]; then docker load -i ~/docker/nginx.tar; fi        
+    #- if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
+    #- if [[ -e ~/docker/backend.tar ]]; then docker load -i ~/docker/backend.tar; fi
+    #- if [[ -e ~/docker/ngninx.tar ]]; then docker load -i ~/docker/nginx.tar; fi        
     - mkdir -p ~/docker
     - ./build_images.sh
     - docker save $FRONTEND_TAG > ~/docker/frontend.tar
