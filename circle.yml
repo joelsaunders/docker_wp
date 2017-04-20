@@ -5,7 +5,7 @@ machine:
     COMMIT: $CIRCLE_SHA1
     BASE_TAG: "eu.gcr.io/beaming-might-163819"
     FRONTEND_TAG: "$BASE_TAG/frontend-$COMMIT"
-    BACKEND_TAG: "$BASE_TAG/backend-$COMMIT1"
+    BACKEND_TAG: "$BASE_TAG/backend-$COMMIT"
     NGINX_TAG: "$BASE_TAG/nginx-$COMMIT"
 
 dependencies:
