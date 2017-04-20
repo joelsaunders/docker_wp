@@ -10,6 +10,7 @@ machine:
     CLOUDSDK_COMPUTE_ZONE: europe-west1-c
     CLUSTER_NAME: cluster-1
     PROJECT_NAME: beaming-might-163819
+    GSDK: /opt/google-cloud-sdk/bin/gcloud
 
 dependencies:
   cache_directories:
@@ -24,7 +25,7 @@ dependencies:
     - sudo /opt/google-cloud-sdk/bin/gcloud config set compute/zone ${CLOUDSDK_COMPUTE_ZONE}
     - sudo /opt/google-cloud-sdk/bin/gcloud --quiet container clusters get-credentials $CLUSTER_NAME
   override:
-    - gcloud docker -- pull eu.gcr.io/beaming-might-163819/frontend_cache:latest
+    - sudo $GSDK docker -- pull eu.gcr.io/beaming-might-163819/frontend_cache:latest
     #- if [[ -e ~/docker/frontend.tar ]]; then docker load -i ~/docker/frontend.tar; fi
     #- if [[ -e ~/docker/backend.tar ]]; then docker load -i ~/docker/backend.tar; fi
     #- if [[ -e ~/docker/ngninx.tar ]]; then docker load -i ~/docker/nginx.tar; fi        
@@ -33,8 +34,8 @@ dependencies:
     #- docker save $FRONTEND_TAG > ~/docker/frontend.tar
     #- docker save $FRONTEND_TAG > ~/docker/backend.tar
     #- docker save $FRONTEND_TAG > ~/docker/frontend.tar
-    - gcloud docker -- build -t eu.gcr.io/beaming-might-163819/frontend_cache ./frontend
-    - gcloud docker -- push eu.gcr.io/beaming-might-163819/frontend_cache
+    - sudo $GSDK docker -- build -t eu.gcr.io/beaming-might-163819/frontend_cache ./frontend
+    - sudo $GSDK docker -- push eu.gcr.io/beaming-might-163819/frontend_cache
 
 deployment:
   staging:
