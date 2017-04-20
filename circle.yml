@@ -17,9 +17,9 @@ dependencies:
     #- if [[ -e ~/docker/ngninx.tar ]]; then docker load -i ~/docker/nginx.tar; fi        
     - mkdir -p ~/docker
     - ./build_images.sh
-    - docker save $FRONTEND_TAG > ~/docker/frontend.tar
-    - docker save $FRONTEND_TAG > ~/docker/backend.tar
-    - docker save $FRONTEND_TAG > ~/docker/frontend.tar    
+    #- docker save $FRONTEND_TAG > ~/docker/frontend.tar
+    #- docker save $FRONTEND_TAG > ~/docker/backend.tar
+    #- docker save $FRONTEND_TAG > ~/docker/frontend.tar    
 
 deployment:
   staging:
