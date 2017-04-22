@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
-echo "No deployment yet"
+if ["$1" == "deploy"]; then
+    echo "Deploying to prod"
+    # push images
+    
+fi
+
