@@ -11,7 +11,6 @@ machine:
     CLUSTER_NAME: cluster-1
     PROJECT_NAME: beaming-might-163819
     GSDK: /opt/google-cloud-sdk/bin/gcloud
-    DEPLOY: "deploy"
 
 dependencies:
 #  cache_directories:
