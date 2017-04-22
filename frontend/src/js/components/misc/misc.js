@@ -4,7 +4,7 @@ export default () => {
     return (
         <div>
             <h3>Misc</h3>
-            <p>No idea what to put here</p>
+            <p>Still no idea what to put here</p>
         </div>
     );
 }
