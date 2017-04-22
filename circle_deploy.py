@@ -1,4 +1,5 @@
 import argparse
+import json
 import os
 import requests
 
@@ -7,7 +8,7 @@ creds_file = 'circle_creds.json'
 if not os.path.exists(creds_file):
     token = None
     while not token:
-        token = raw_input('you need a circleci token from:\nhttps://circleci.com/account/api\n\nenter circleci token:\n')
+        token = input('you need a circleci token from:\nhttps://circleci.com/account/api\n\nenter circleci token:\n')
     creds = {'circle-token': token}
     with open(creds_file, 'w') as c:
         json.dump(creds, c)
@@ -20,16 +21,16 @@ parser.add_argument('branch', help="the git branch to deploy e.g. development")
 args = parser.parse_args()
 branch = args.branch
 
-print 'Deploying %s branch.' % (branch.upper())
+print('Deploying {} branch.'.format(branch.upper()))
 
 payload = json.dumps({'build_parameters': {'DEPLOY': 'deploy'}})
 
 request = requests.post(
-    'https://circleci.com/api/v1.1/project/bitbucket/ueni/walker_app_2/tree/%s' % branch,
+    'https://circleci.com/api/v1.1/project/github/joelsaunders/docker_wp/tree/%s' % branch,
     params=creds,
     headers=headers,
     data=payload
 )
 
-print request.content
+print(request.content)
 

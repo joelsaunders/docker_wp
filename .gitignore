@@ -13,3 +13,5 @@ docker_wp/configs/override\.py
 
 
 \.vscode/
+
+circle_creds\.json
