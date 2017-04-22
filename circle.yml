@@ -41,4 +41,4 @@ deployment:
   staging:
     branch: [/.*/]
     commands:
-      - ./deploy.sh
+      - ./deploy.sh $DEPLOY

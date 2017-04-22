@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-if ["$DEPLOY" == "deploy"]; then
+if ["$1" == "deploy"]; then
     sudo $GSDK docker -- push $FRONTEND_TAG &&
     sudo $GSDK docker -- push $BACKEND_TAG &&
     sudo $GSDK docker -- push $NGINX_TAG &&
