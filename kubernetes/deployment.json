@@ -18,13 +18,13 @@
 						"name": "SECRET_KEY",
 						"value": "cG90YXRv"
 					}],
-					"image": "backend",
+					"image": "eu.gcr.io/beaming-might-163819/backend:3a5b880d949baa7c6b6d28e631ce10b52d1069ed",
 					"name": "back-end",
 					"ports": [{
 						"containerPort": 8000
 					}]
 				}, {
-					"image": "nginx",
+					"image": "eu.gcr.io/beaming-might-163819/nginx:3a5b880d949baa7c6b6d28e631ce10b52d1069ed",
 					"name": "front-end",
 					"ports": [{
 						"containerPort": 80

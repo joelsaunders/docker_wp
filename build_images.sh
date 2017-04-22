@@ -10,7 +10,7 @@ export BACKEND_TAG=$BASE_TAG/backend:$COMMIT
 export NGINX_TAG=$BASE_TAG/nginx:$COMMIT
 
 echo "building frontend image"
-docker build -t $FRONTEND_TAG -q ./frontend
+docker build -t $FRONTEND_TAG ./frontend
 rm -rf nginx/www
 mkdir -p nginx/www/src
 cp -a frontend/src/style nginx/www/src
