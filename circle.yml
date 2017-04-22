@@ -4,9 +4,9 @@ machine:
   environment:
     COMMIT: $CIRCLE_SHA1
     BASE_TAG: "eu.gcr.io/beaming-might-163819"
-    FRONTEND_TAG: "$BASE_TAG/frontend-$COMMIT"
-    BACKEND_TAG: "$BASE_TAG/backend-$COMMIT"
-    NGINX_TAG: "$BASE_TAG/nginx-$COMMIT"
+    FRONTEND_TAG: "$BASE_TAG/frontend:$COMMIT"
+    BACKEND_TAG: "$BASE_TAG/backend:$COMMIT"
+    NGINX_TAG: "$BASE_TAG/nginx:$COMMIT"
     CLOUDSDK_COMPUTE_ZONE: europe-west1-c
     CLUSTER_NAME: cluster-1
     PROJECT_NAME: beaming-might-163819
