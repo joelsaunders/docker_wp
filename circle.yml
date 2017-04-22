@@ -41,4 +41,5 @@ deployment:
   staging:
     branch: [/.*/]
     commands:
+      - sudo chown -R ubuntu:ubuntu /home/ubuntu/.kube
       - ./deploy.sh $DEPLOY
