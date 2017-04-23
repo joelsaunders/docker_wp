@@ -11,6 +11,6 @@ RUN pip install -r requirements.txt
 COPY . /code/
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 RUN chmod +x ./deploy.sh
-RUN ./deploy.sh production && rm -rf /code/docker_wp/staticfiles && python manage.py collectstatic
+RUN ./deploy.sh production && python manage.py collectstatic --noinput
 EXPOSE 8000
 CMD ["gunicorn", "docker_wp.wsgi"]
