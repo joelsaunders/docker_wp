@@ -19,12 +19,16 @@ docker run --entrypoint cat --rm $FRONTEND_TAG /code/dist/bundle.js > nginx/www/
 echo "frontend build finished"
 echo "$FRONTEND_TAG"
 
+echo "building backend image"
+docker build -t $BACKEND_TAG -q ./backend_api
+export id=$(docker run -dt $BACKEND_TAG bash)
+mkdir -p nginx/www/static
+docker cp $id:/code/docker_wp/staticfiles nginx/www/static/
+docker stop $id
+echo "finished building backend image"
+echo "$BACKEND_TAG"
+
 echo "building nginx image"
 docker build -t $NGINX_TAG -q ./nginx
 echo "finished building nginx image"
 echo "$NGINX_TAG"
-
-echo "building backend image"
-docker build -t $BACKEND_TAG -q ./backend_api
-echo "finished building backend image"
-echo "$BACKEND_TAG"
