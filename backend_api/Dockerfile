@@ -1,5 +1,6 @@
 FROM python:3.5-alpine
 ENV PYTHONUNBUFFERED 1
+ENV SECRET_KEY 'secret'
 RUN apk update && \
     apk add --virtual build-deps gcc musl-dev && \
     apk add postgresql-dev

@@ -3,6 +3,11 @@
     min-width: 75%
 }
 
+a {
+  color:inherit !important;
+  text-decoration: none;
+ }
+
 .app {
   /*border: 5px solid pink;*/
   width: 100%;
@@ -125,7 +130,7 @@
 
 /*Body*/
 
-/*BlogPost*/
+/*BlogPostIndex*/
 
 .post-container {
   list-style-type: none !important;
@@ -167,4 +172,19 @@
   border-top: 1px black;
   border-top-style: dashed;
   margin: 0px 4px 0px 4px;
+}
+
+ /* Blog Detail */
+
+ .detail-post-container {
+   display: flex;
+   margin: 20px 0px 20px 0px;
+   background: #e3e3e3;
+   flex-direction: column;
+ }
+
+ .detail-post-textarea {
+  margin: 10px;
+  padding: 5px;
+  overflow: hidden;
 }
