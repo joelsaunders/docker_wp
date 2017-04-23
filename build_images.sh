@@ -21,10 +21,10 @@ echo "$FRONTEND_TAG"
 
 echo "building backend image"
 docker build -t $BACKEND_TAG -q ./backend_api
-export id=$(docker run -dt $BACKEND_TAG bash)
+export id=$(sudo docker run -d $BACKEND_TAG)
 mkdir -p nginx/www/static
-docker cp $id:/code/docker_wp/staticfiles nginx/www/static/
-docker stop $id
+sudo docker cp $id:/code/docker_wp/staticfiles nginx/www/static/
+sudo docker stop $id
 echo "finished building backend image"
 echo "$BACKEND_TAG"
 
