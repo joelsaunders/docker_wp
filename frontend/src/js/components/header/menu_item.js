@@ -6,7 +6,7 @@ import { Link } from 'react-router'
 class MenuItem extends Component {
     render() {
         return (
-            <Link to={this.props.title.toLowerCase()} className="menu-item" style={{ textDecoration: 'none' }} >
+            <Link to={`/${this.props.title.toLowerCase()}`} className="menu-item" style={{ textDecoration: 'none' }} >
                 <div onClick={() => this.props.selectView(this.props.title)} >
                     <h6 className="menu-item-text">
                         {this.props.title}

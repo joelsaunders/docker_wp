@@ -19,4 +19,4 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class BlogPostSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = models.BlogPost
-        fields = ('title', 'body', 'author', 'picture', 'created')
+        fields = ('id', 'title', 'body', 'author', 'picture', 'created', 'description')

@@ -5,7 +5,11 @@ services:
   web:
     env_file: .env
     build: ./backend_api
-    command: python manage.py runserver 0.0.0.0:8080
+    command: >
+      sh -c '
+      ./deploy.sh development &&
+      python manage.py runserver 0.0.0.0:8080
+      '
     volumes:
       - ./backend_api:/code
     ports:

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router';
 
 import { fetchPosts } from '../../actions/index';
 
@@ -22,9 +23,9 @@ class BlogIndex extends Component {
                                             <img src={post.picture} className="post-picture" />
                                         </div>
                                         <div className="post-textarea">
-                                            <h4>{post.title}</h4>
+                                            <h4><Link to={`/blog/${post.id}`}>{post.title}</Link></h4>
                                             <h5>{post.created}</h5>
-                                            <p className="post-text">{post.body}</p>
+                                            <p className="post-text">{post.description}</p>
                                         </div>
                                     </li>
                                     <div className="post-border" > </div>
