@@ -19,7 +19,7 @@ class PostDetail extends Component {
         }
         return (
             <div>
-                <div className="detail-post-container">
+                <div className="detail-post-container generic-card">
                     <div className="detail-post-textarea">
                         <h3>{this.props.post.title}</h3>
                         <h4>{this.props.post.created}</h4>

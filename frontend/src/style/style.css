@@ -8,6 +8,15 @@ a {
   text-decoration: none;
  }
 
+ p, h1, h2, h3, h4, h5, h6  {
+   font-family: 'Lato', sans-serif !important;
+ }
+
+ html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+}
+
 .app {
   /*border: 5px solid pink;*/
   width: 100%;
@@ -19,8 +28,8 @@ a {
   flex-direction: column;
   width: 75%;
   margin: auto;
-  max-width: 1000px;
-  min-width: 700px;
+  max-width: 950px;
+  min-width: 750px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -35,15 +44,6 @@ a {
   height: 200px;
 }
 
-.main {
-  display: flex;
-  margin: auto;
-  flex-direction: column;
-  width: 75%;
-  /*max-width: 800px;*/
-  /*min-width: 700px;*/
-}
-
 .menu {
   display: flex;
   width: 100%;
@@ -52,6 +52,7 @@ a {
 }
 
 .menu-background {
+  object-fit: cover;
   height: 65%;
   width: 100%;
 }
@@ -70,6 +71,7 @@ a {
   width: 20%;
   color: white;
   height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
 .menu-item:nth-child(1) {
@@ -105,27 +107,23 @@ a {
 .menu-name {
   height: 200px;
   min-width: 200px;
-  max-width: 300px;
+  max-width: 200px;
   background: black;
   color: white;
+  align-items: flex-end;
+  display: flex;
+  word-wrap: break-word;
+  padding: 10px;
 }
 
 .m1 {
   font-weight: bold;
-  margin-left: 10%;
-  margin-right: 10%;
-  /*width: 100%*/
-}
-
-.fulljustify {
-  text-align: justify;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-.fulljustify:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
+  margin-left: 10px;
+  /*margin-right: 10%;*/
+  margin-top: 5%;
+  /*letter-spacing: 25px;*/
+  word-wrap: break-word;
+  width: 100%
 }
 
 /*Body*/
@@ -136,6 +134,11 @@ a {
   list-style-type: none !important;
   padding: 0 !important;
   margin: 0 !important;
+  font-family: 'Lato', sans-serif;
+}
+
+.generic-card {
+  box-shadow: 1px 3px 6px rgba(0,0,0,0.12), 1px 3px 5px rgba(0,0,0,0.24);
 }
 
 .post {
@@ -143,6 +146,11 @@ a {
   margin: 20px 0px 20px 0px;
   height: 350px;
   background: #e3e3e3;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.post:hover {
+  box-shadow: 0 10px 18px rgba(0,0,0,0.25), 0 8px 8px rgba(0,0,0,0.22);
 }
 
 .post-picturecontainer {
@@ -154,7 +162,7 @@ a {
 .post-textarea {
   width: 50%;
   margin-left: 5px;
-  padding: 5px;
+  padding: 9px;
   overflow: hidden;
 }
 
@@ -185,7 +193,7 @@ a {
 
  .detail-post-textarea {
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
   overflow: hidden;
 }
 

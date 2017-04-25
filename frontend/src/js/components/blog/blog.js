@@ -18,17 +18,17 @@ class BlogIndex extends Component {
                         this.props.posts.map(post => {
                             return (
                                 <div key={post.title}>
-                                    <li className="post" >
+                                    <li className="post generic-card" >
                                         <div className="post-picturecontainer">
                                             <img src={post.picture} className="post-picture" />
                                         </div>
                                         <div className="post-textarea">
                                             <h4><Link to={`/blog/${post.id}`}>{post.title}</Link></h4>
-                                            <h5>{post.created}</h5>
+                                            <h6>{post.created}</h6>
                                             <p className="post-text">{post.description}</p>
                                         </div>
                                     </li>
-                                    <div className="post-border" > </div>
+                                    {/*<div className="post-border" > </div>*/}
                                 </div>
                             );
                         })
