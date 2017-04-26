@@ -10,7 +10,7 @@ export BACKEND_TAG=$BASE_TAG/backend:$COMMIT
 export NGINX_TAG=$BASE_TAG/nginx:$COMMIT
 
 echo "building frontend image"
-docker build -t $FRONTEND_TAG ./frontend
+docker build -t $FRONTEND_TAG -q ./frontend
 rm -rf nginx/www
 mkdir -p nginx/www/src
 cp -a frontend/src/style nginx/www/src
@@ -20,7 +20,7 @@ echo "frontend build finished"
 echo "$FRONTEND_TAG"
 
 echo "building backend image"
-docker build -t $BACKEND_TAG -q ./backend_api
+docker build -t $BACKEND_TAG ./backend_api
 export id=$(sudo docker run -d $BACKEND_TAG)
 mkdir -p nginx/www/static
 sudo docker cp $id:/code/docker_wp/static nginx/www/
