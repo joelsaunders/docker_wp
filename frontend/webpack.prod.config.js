@@ -1,7 +1,9 @@
 var path = require("path");
 var webpack = require('webpack');
 var BundleTracker = require('webpack-bundle-tracker');
+var CompressionPlugin = require('compression-webpack-plugin');
 var config = require('./webpack.base.config.js');
+
 
 module.exports = Object.assign(config, {
   output: {
@@ -21,6 +23,13 @@ module.exports = Object.assign(config, {
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin() 
+    new webpack.optimize.AggressiveMergingPlugin(),
+    new CompressionPlugin({
+      asset: "[path].gz[query]",
+      algorithm: "gzip",
+      test: /\.js$|\.css$|\.html$/,
+      threshold: 10240,
+      minRatio: 0.8
+    })
   ],
 })
