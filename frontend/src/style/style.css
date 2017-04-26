@@ -120,9 +120,7 @@ a {
 .m1 {
   font-weight: bold;
   margin-left: 10px;
-  /*margin-right: 10%;*/
   margin-top: 5%;
-  /*letter-spacing: 25px;*/
   word-wrap: break-word;
   width: 100%
 }

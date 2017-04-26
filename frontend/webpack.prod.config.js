@@ -1,10 +1,7 @@
 var path = require("path");
 var webpack = require('webpack');
 var BundleTracker = require('webpack-bundle-tracker');
-// var HtmlWebpackPlugin = require('html-webpack-plugin');
-// var ExtractTextPlugin = require("extract-text-webpack-plugin");;
-
-var config = require('./webpack.base.config.js')
+var config = require('./webpack.base.config.js');
 
 module.exports = Object.assign(config, {
   output: {
@@ -17,7 +14,13 @@ module.exports = Object.assign(config, {
         BASE_API_URL: JSON.stringify('http://35.187.59.182/api/')
       }
     }),
-    // new HtmlWebpackPlugin(),
-    // new ExtractTextPlugin('style.css'),
+    new webpack.DefinePlugin({
+      'process.env': {
+      'NODE_ENV': JSON.stringify('production')
+    }
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin(),
+    new webpack.optimize.AggressiveMergingPlugin() 
   ],
 })

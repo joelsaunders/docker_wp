@@ -20,7 +20,9 @@ class BlogIndex extends Component {
                                 <div key={post.title}>
                                     <li className="post generic-card" >
                                         <div className="post-picturecontainer">
-                                            <img src={post.picture} className="post-picture" />
+                                            <Link to={`/blog/${post.id}`}>
+                                                <img src={post.picture} className="post-picture" />
+                                            </Link>
                                         </div>
                                         <div className="post-textarea">
                                             <h4><Link to={`/blog/${post.id}`}>{post.title}</Link></h4>
