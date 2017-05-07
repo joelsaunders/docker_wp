@@ -5,10 +5,6 @@ import { Link } from 'react-router';
 import { parseMarkdown } from '../../utils/markdownParser'
 
 class PostDetail extends Component {
-    // static contextTypes = {
-    //     router: PropTypes.object
-    // }
-
     componentWillMount() {
         this.props.fetchPost(this.props.params.id)
     }

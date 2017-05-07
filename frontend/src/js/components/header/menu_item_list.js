@@ -1,4 +1,4 @@
 const menuItems = [
-    "Blog", "About", "Music", "Misc", "Contact"
+    "Blog", "About", "Site", "Misc","Contact"
 ];
 export default menuItems;
