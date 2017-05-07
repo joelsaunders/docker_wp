@@ -9,7 +9,10 @@ class MainPage extends Component {
         return (
             <div className="parent">
                 <Header />
-                { children }
+                <div className="main-content">
+                    { children }
+                </div>
+                <div className="footer">Joel Saunders © 2017</div>
             </div>
         );
     }

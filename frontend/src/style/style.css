@@ -1,6 +1,5 @@
-.container {
-    width: 100%;
-    min-width: 75%
+.container-1 {
+    height: 100% !important;
 }
 
 a {
@@ -15,6 +14,11 @@ a {
  html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
+  height: 100%;
+}
+
+body {
+  height: 100%;
 }
 
 td {
@@ -37,6 +41,7 @@ td {
   min-width: 750px;
   padding-left: 10px;
   padding-right: 10px;
+  min-height: 100%;
 }
 
 .title-text {
@@ -45,6 +50,19 @@ td {
 
 .hlink {
   color: green !important;
+}
+
+.main-content {
+  min-height: 100%;
+  flex: 1;
+}
+
+.footer {
+  height: 25px;
+  border-top: 1px solid lightgrey;
+  color: gray;
+  font-size: small;
+  margin-top: 25px;
 }
 
 /*Header*/
