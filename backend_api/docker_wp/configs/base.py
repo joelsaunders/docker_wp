@@ -31,7 +31,7 @@ def get_env_variable(var_name):
 SECRET_KEY = get_env_variable('SECRET_KEY')
 
 
-ALLOWED_HOSTS = ['http://www.thebookofjoel.com', 'localhost', '0.0.0.0', '35.187.59.182']
+ALLOWED_HOSTS = ['thebookofjoel.com', 'localhost', '0.0.0.0', '35.187.59.182']
 
 
 # Application definition
