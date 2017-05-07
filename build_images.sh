@@ -15,6 +15,7 @@ rm -rf nginx/www
 mkdir -p nginx/www/src
 cp -a frontend/src/style nginx/www/src
 cp -a frontend/index.html nginx/www
+cp -a frontend/favicon.ico nginx/www
 docker run --entrypoint cat --rm $FRONTEND_TAG /code/dist/bundle.js > nginx/www/bundle.js
 echo "frontend build finished"
 echo "$FRONTEND_TAG"
