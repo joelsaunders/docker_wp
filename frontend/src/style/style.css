@@ -218,13 +218,14 @@ td {
    display: flex;
    margin: 20px 0px 20px 0px;
    background: #e3e3e3;
-   flex-direction: column;
+   /*flex-direction: column;*/
  }
 
  .detail-post-textarea {
   margin: 10px;
   padding: 10px;
   overflow: hidden;
+  flex: 1;
 }
 
 .detail-post-img {
@@ -258,4 +259,32 @@ td {
 
 .about-biotable {
   margin-top: 15px;
+}
+
+.about-interests-card {
+  display: flex;
+   margin: 20px 0px 20px 0px;
+   background: #e3e3e3;
+   flex-direction: column;
+}
+
+.image-text { 
+   position: relative; 
+   width: 100%;
+}
+
+.image-text-image {
+  height: 350px;
+  width: 100%;
+  padding: 0;
+  object-fit: cover;
+}
+
+.image-text-text { 
+   position: absolute; 
+   bottom: 0px; 
+   left: 0;
+   width: 100%;
+   color: white;
+   padding: 20px;
 }

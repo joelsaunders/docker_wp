@@ -62,6 +62,37 @@ export default () => {
                     </p>
                 </div>
             </div>
+            <div className="about-interests-card generic-card">
+                <div className="image-text">
+                    <img src="http://res.cloudinary.com/dceeo2a79/image/upload/v1494276668/1010213_10151852586077051_988562173_n_qf96ts.jpg" className="about-interestspicture" className="image-text-image" />
+                    <h1 className="image-text-text" >Skiing</h1>           
+                </div>
+                <div className="detail-post-textarea">
+                    <p>
+                        I love to ski. I've been interested in skiing from an early age and was a member of my University ski racing team, competing in regional and national competitions.
+                    </p>
+                    <p>
+                        I enjoy slalom, freeride and have recently been spending a lot of time on the park.
+                    </p>
+                    <p>
+                        In the future I would like to try some ski touring and would one day like to tour the Chamonix to Zermatt Haute Route.
+                    </p>
+                </div>
+            </div>
+            <div className="about-interests-card generic-card">
+                <div className="image-text">
+                    <img src="http://res.cloudinary.com/dceeo2a79/image/upload/v1494280648/IMG_20150102_170923902_vqnvat.jpg" className="about-interestspicture" className="image-text-image" />
+                    <h1 className="image-text-text" >Seeing stuff</h1>           
+                </div>
+                <div className="detail-post-textarea">
+                    <p>
+                        Just like nearly everyone, I like to travel and see things. Not knowing what to do immediately after graduating led to me joining my girlfriend going to teach for a year in a school in China. We used any time off to go visit places, mostly not in China because when there is a holiday, everyone is on holiday.
+                    </p>
+                    <p>
+                        I was also been lucky enough to spend a year of my time at university as an exchange student at UNSW in Sydney. Being a student gave me a lot of time off which allowed me and a few friends to complete a road trip from Darwin to Adelaide, something i had wanted to do for a long time.
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }
