@@ -21,11 +21,6 @@ body {
   height: 100%;
 }
 
-td {
-  padding-right: 30px !important;
-  padding-bottom: 10px !important;
-}
-
 .app {
   /*border: 5px solid pink;*/
   width: 100%;
@@ -253,13 +248,17 @@ td {
 .about-biotext {
   width: 70%;
   margin-left: 5px;
-  padding: 15px;
+  padding: 25px;
   overflow: hidden;
 }
 
 .about-biotable {
-  margin-top: 15px;
-  padding: 30px;
+  padding: 10px;
+}
+
+.about-biotable-cell {
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
 }
 
 .about-interests-card {
@@ -292,7 +291,6 @@ td {
 
 /* contact me */
 
-/* Style all font awesome icons */
 .fa {
     padding: 20px !important;
     font-size: 4rem !important;
@@ -302,12 +300,9 @@ td {
     height: 100px;
 }
 
-/* Add a hover effect if you want */
 .fa:hover {
     opacity: 0.7;
 }
-
-/* Set a specific color for each brand */
 
 .fa-facebook {
     background: #3B5998;
@@ -334,6 +329,16 @@ td {
     color: white !important;
 }
 
-i {
-  padding: 20px !important;
+.contact-logotable {
+  padding: 30px;
+}
+
+.contact-logotable-cell {
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+}
+
+.contact-text {
+  padding-top: 10px;
 }

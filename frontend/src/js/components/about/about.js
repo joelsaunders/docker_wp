@@ -13,32 +13,60 @@ export default () => {
                         <table>
                             <tbody>
                                 <tr>
-                                    <td><h6><strong>Name</strong></h6></td>
-                                    <td><h6>Joel Stephen Saunders</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Name</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>Joel Stephen Saunders</h6>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><h6><strong>Age</strong></h6></td>
-                                    <td><h6>26</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Age</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>26</h6>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><h6><strong>Location</strong></h6></td>
-                                    <td><h6>London</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Location</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>London</h6>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><h6><strong>Interests</strong></h6></td>
-                                    <td><h6>Skiing, Rugby, Travel, Craft Beer</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Interests</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>Skiing, Rugby, Travel, Craft Beer</h6>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><h6><strong>Technologies</strong></h6></td>
-                                    <td><h6>Python, Django REST Framework, React, Docker, Kubernetes</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Technologies</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>Python, Django REST Framework, React, Docker, Kubernetes</h6>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><h6><strong>Favourite<br/>Animal</strong></h6></td>
-                                    <td><h6>Dog</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Favourite<br/>Animal</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>Dog</h6>
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td><h6><strong>Studied</strong></h6></td>
-                                    <td><h6>Physics</h6></td>
+                                    <td className="about-biotable-cell">
+                                        <h6><strong>Studied</strong></h6>
+                                    </td>
+                                    <td className="about-biotable-cell">
+                                        <h6>Physics</h6>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
