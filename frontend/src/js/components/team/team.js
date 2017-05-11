@@ -31,7 +31,7 @@ export default () => {
                                     <p><strong>Joel Force One Pilot</strong><br/>Joel Saunders</p>
                                 </td>
                                 <td className="team-table-cell">
-                                    <img className="team-table-picture" src="http://res.cloudinary.com/dceeo2a79/image/upload/v1494528787/14079531_10154535456656015_1540289996876410660_n_wpnmn3.jpg" />
+                                    <img className="team-table-picture" src="http://res.cloudinary.com/dceeo2a79/image/upload/v1494177669/joelpic1_gobweb.jpg" />
                                     <p><strong>Janitor</strong><br/>Joel Saunders</p>
                                 </td>
                                 <td className="team-table-cell">
@@ -46,7 +46,7 @@ export default () => {
                                 </td>
                                 <td className="team-table-cell">
                                     <img className="team-table-picture" src="https://res.cloudinary.com/dceeo2a79/image/upload/v1494530245/1016877_10154792592115154_4422530397631181048_n_y08ufu.jpg" />
-                                    <p><strong>Head Brewer</strong><br/>Joel Saunders</p>
+                                    <p><strong>Joel Saunders</strong><br/>Joel Saunders</p>
                                 </td>
                                 <td className="team-table-cell">
                                     <img className="team-table-picture" src="https://res.cloudinary.com/dceeo2a79/image/upload/v1494530338/20170511_120316_1024_xwbsaq.jpg" />

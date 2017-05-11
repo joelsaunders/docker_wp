@@ -356,10 +356,11 @@ body {
  .team-table {
    padding: 0px 20px 20px 20px;
    margin: auto;
+   display: flex;
  }
 
  .team-table-cell {
-   padding: 10px;
+   padding: 15px;
    /*width: 50%;*/
    height: 50%;
  }
