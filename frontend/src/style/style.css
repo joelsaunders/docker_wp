@@ -342,3 +342,30 @@ body {
 .contact-text {
   padding-top: 10px;
 }
+
+
+/* team */
+
+ .team-tablecontainer {
+   display: flex;
+   margin: 20px 0px 20px 0px;
+   background: #e3e3e3;
+   flex-direction: column;
+ }
+
+ .team-table {
+   padding: 0px 20px 20px 20px;
+   margin: auto;
+ }
+
+ .team-table-cell {
+   padding: 10px;
+   /*width: 50%;*/
+   height: 50%;
+ }
+
+ .team-table-picture {
+   height: 200px;
+   width: 200px;
+   object-fit: cover;
+ }
