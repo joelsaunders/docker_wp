@@ -395,3 +395,58 @@ body {
    margin: auto;
    width: 200px;
  }
+
+ /* Site */
+
+ .site-card {
+  display: flex;
+  margin: 20px 0px 20px 0px;
+  /*height: 350px;*/
+  /*background: #e3e3e3;*/
+  background: whitesmoke;
+  flex-direction: row;
+}
+
+.site-card-text {
+  width: 60%;
+  margin-left: 5px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.site-card-table {
+  display: flex;
+  flex-direction: row;
+  /*width: 40%;*/
+  flex-grow: 1;
+}
+
+.site-card-table-row {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.logo-image {
+  width: 100px;
+  height: 100px;
+  /*flex: 1;*/
+  margin: auto;
+  padding: 5px;
+}
+
+.logo-image-wide {
+  width: 200px;
+  height: 100px;
+  /*flex: 1;*/
+  margin: auto;
+  /*padding: 25px;*/
+}
+.logo-image-wider {
+  width: 200px;
+  height: 50px;
+  /*flex: 1;*/
+  margin: auto;
+  /*padding: 25px;*/
+}
