@@ -9,6 +9,7 @@ export default () => {
                     <p className="contact-text">Please feel free to contact me with any questions or queries you might have about topics in this blog, or anything else!</p>
                     <p>I'll try and respond as fast as I can.</p> 
                     <p>I would especially like to hear from you if you think anything I have said is wrong or you don't agree with me.</p>
+                    <p>Reach me at <a href="mailto:joel.st.saunders@gmail.com">joel.st.saunders@gmail.com</a></p>
                 </div>
                 <div className="contact-logotable">
                     <table>
@@ -23,7 +24,7 @@ export default () => {
                             </tr>
                             <tr>
                                 <td className="contact-logotable-cell">
-                                    <a href="#"><i className="fa fa-envelope"></i></a>
+                                    <a href="mailto:joel.st.saunders@gmail.com"><i className="fa fa-envelope"></i></a>
                                 </td>
                                 <td className="contact-logotable-cell">
                                     <a href="#"><i className="fa fa-skype"></i></a>

@@ -355,18 +355,35 @@ body {
 
  .team-table {
    padding: 0px 20px 20px 20px;
-   margin: auto;
+   /*margin: auto;*/
    display: flex;
+   flex-grow: 1;
+   flex-direction: row;
+ }
+
+ .team-table-col {
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
  }
 
  .team-table-cell {
    padding: 15px;
    /*width: 50%;*/
    height: 50%;
+   display: flex;
+   flex: 1;
+   flex-direction: column;
  }
 
  .team-table-picture {
    height: 200px;
    width: 200px;
    object-fit: cover;
+   /*margin: auto;*/
+ }
+
+ .headshot-container {
+   margin: auto;
+   width: 200px;
  }
