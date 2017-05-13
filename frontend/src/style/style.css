@@ -15,6 +15,7 @@ a {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
   height: 100%;
+  background: lightgrey;
 }
 
 body {
@@ -24,7 +25,8 @@ body {
 .app {
   /*border: 5px solid pink;*/
   width: 100%;
-  height: 100%
+  height: 100%;
+  background: lightgray;
 }
 
 .parent {
@@ -54,8 +56,8 @@ body {
 
 .footer {
   height: 25px;
-  border-top: 1px solid lightgrey;
-  color: gray;
+  border-top: 1px solid darkgray;
+  color: black;
   font-size: small;
   margin-top: 25px;
 }
@@ -170,7 +172,8 @@ body {
   display: flex;
   margin: 20px 0px 20px 0px;
   height: 350px;
-  background: #e3e3e3;
+  /*background: #e3e3e3;*/
+  background: whitesmoke;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
@@ -212,7 +215,8 @@ body {
  .detail-post-container {
    display: flex;
    margin: 20px 0px 20px 0px;
-   background: #e3e3e3;
+   /*background: #e3e3e3;*/
+   background: whitesmoke;
    /*flex-direction: column;*/
  }
 
@@ -236,7 +240,9 @@ body {
   display: flex;
   margin: 20px 0px 20px 0px;
   height: 350px;
-  background: #e3e3e3;
+  /*background: #e3e3e3;*/
+   background: whitesmoke;
+  
 }
 
 .about-biopicture {
@@ -248,7 +254,7 @@ body {
 .about-biotext {
   width: 70%;
   margin-left: 5px;
-  padding: 25px;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -264,8 +270,9 @@ body {
 .about-interests-card {
   display: flex;
    margin: 20px 0px 20px 0px;
-   background: #e3e3e3;
+   /*background: #e3e3e3;*/
    flex-direction: column;
+   background: whitesmoke;   
 }
 
 .image-text { 
@@ -349,7 +356,8 @@ body {
  .team-tablecontainer {
    display: flex;
    margin: 20px 0px 20px 0px;
-   background: #e3e3e3;
+   /*background: #e3e3e3;*/
+   background: whitesmoke;   
    flex-direction: column;
  }
 
