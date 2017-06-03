@@ -12,7 +12,23 @@ export default () => {
                     <p>Reach me at <a className="hlink" href="mailto:joel.st.saunders@gmail.com">joel.st.saunders@gmail.com</a></p>
                 </div>
                 <div className="contact-logotable">
-                    <table>
+                    <div className="site-card-table">
+                        <div className="site-card-table-row">
+                            <div className="contact-logotable-cell">
+                                <a href="https://www.linkedin.com/in/joel-saunders-266476102/"><i className="fa fa-linkedin"></i></a>
+                            </div>
+                            <div className="contact-logotable-cell">
+                                <a href="https://github.com/joelsaunders"><i className="fa fa-github"></i></a>
+                            </div>
+                            <div className="contact-logotable-cell">
+                                <a href="mailto:joel.st.saunders@gmail.com"><i className="fa fa-envelope"></i></a>
+                            </div>
+                            <div className="contact-logotable-cell">
+                                <a href="#"><i className="fa fa-skype"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    {/*<table>
                         <tbody>
                             <tr>
                                 <td className="contact-logotable-cell">
@@ -31,7 +47,7 @@ export default () => {
                                 </td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table>*/}
                 </div>
             </div>
         </div>

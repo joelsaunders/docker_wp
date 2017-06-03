@@ -179,6 +179,7 @@ body {
   display: flex;
   word-wrap: break-word;
   padding: 10px;
+  margin-right: -1px;
 }
 
 .m1 {
@@ -198,10 +199,11 @@ body {
     display: none;
     height: auto;
     flex-direction: column;
-		position: absolute;
+		position: fixed;
 		background: #fff;
-    left: 0px;
-		width: 100%;
+    right: 5px;
+    top: 60px;
+		width: 500px;
   }
 
   .menu-expand-icon:hover ~ .menu-item-container { 
@@ -221,6 +223,10 @@ body {
     font-family: 'Lato', sans-serif;
     margin-top: -2px;
     padding: 20px;
+  }
+
+  .menu-item-text {
+    padding: 40px;
   }
 
   .menu-background {
@@ -367,7 +373,6 @@ body {
 .about-interests-card {
   display: flex;
    margin: 20px 0px 20px 0px;
-   /*background: #e3e3e3;*/
    flex-direction: column;
    background: whitesmoke;   
 }
@@ -391,6 +396,22 @@ body {
    width: 100%;
    color: white;
    padding: 20px;
+}
+
+@media only screen and (max-width: 743px) {
+  .about-biocard {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .about-biotext {
+    width: 100%;
+  }
+
+  .about-biopicture {
+    width: 100%;
+    height: 500px;
+  }
 }
 
 /* contact me */
@@ -438,14 +459,22 @@ body {
 }
 
 .contact-logotable-cell {
-  padding: 20px;
-  width: 50%;
-  height: 50%;
+  padding: 10px;
+  width: auto;
+  margin: auto;
 }
 
 .contact-text {
   padding-top: 10px;
 }
+
+ @media only screen and (max-width: 743px) {
+   .contact-logotable-cell {
+      padding: 20px;
+      width: auto;
+      height: 50%;
+    }
+ }
 
 
 /* team */
@@ -453,14 +482,12 @@ body {
  .team-tablecontainer {
    display: flex;
    margin: 20px 0px 20px 0px;
-   /*background: #e3e3e3;*/
    background: whitesmoke;   
    flex-direction: column;
  }
 
  .team-table {
    padding: 0px 20px 20px 20px;
-   /*margin: auto;*/
    display: flex;
    flex-grow: 1;
    flex-direction: row;
@@ -474,7 +501,6 @@ body {
 
  .team-table-cell {
    padding: 15px;
-   /*width: 50%;*/
    height: 50%;
    display: flex;
    flex: 1;
@@ -485,7 +511,6 @@ body {
    height: 200px;
    width: 200px;
    object-fit: cover;
-   /*margin: auto;*/
  }
 
  .headshot-container {
@@ -498,8 +523,6 @@ body {
  .site-card {
   display: flex;
   margin: 20px 0px 20px 0px;
-  /*height: 350px;*/
-  /*background: #e3e3e3;*/
   background: whitesmoke;
   flex-direction: row;
 }
@@ -514,7 +537,6 @@ body {
 .site-card-table {
   display: flex;
   flex-direction: row;
-  /*width: 40%;*/
   flex-grow: 1;
 }
 
@@ -528,7 +550,6 @@ body {
 .logo-image {
   width: 100px;
   height: 100px;
-  /*flex: 1;*/
   margin: auto;
   padding: 5px;
 }
@@ -536,14 +557,20 @@ body {
 .logo-image-wide {
   width: 200px;
   height: 100px;
-  /*flex: 1;*/
   margin: auto;
-  /*padding: 25px;*/
 }
 .logo-image-wider {
   width: 200px;
   height: 50px;
-  /*flex: 1;*/
   margin: auto;
-  /*padding: 25px;*/
+}
+
+@media only screen and (max-width: 743px) {
+    .site-card {
+      flex-direction: column;
+    }
+
+    .site-card-text {
+      width: 100%;
+    }
 }
