@@ -199,18 +199,13 @@ body {
     height: auto;
   }
 
-  .menu-expand-icon:active ~ .menu-item-container { 
+  .menu-expand-icon:hover ~ .menu-item-container { 
 		display: flex;
     flex-direction: column;
 		position: absolute;
-		/*padding: 20px;*/
 		background: #fff;
-		/*border: 5px solid #444;*/
-		/*right: 5px;*/
-		/*top: 60px;*/
     left: 0px;
 		width: 100%;
-		/*border-radius: 4px 0 4px 4px;*/
 	}
 
   .menu-item {
