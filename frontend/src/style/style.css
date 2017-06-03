@@ -197,15 +197,19 @@ body {
   .menu-item-container {
     display: none;
     height: auto;
-  }
-
-  .menu-expand-icon:hover ~ .menu-item-container { 
-		display: flex;
     flex-direction: column;
 		position: absolute;
 		background: #fff;
     left: 0px;
 		width: 100%;
+  }
+
+  .menu-expand-icon:hover ~ .menu-item-container { 
+		display: flex;
+	}
+
+  .menu-expand-icon:active ~ .menu-item-container { 
+		display: flex;
 	}
 
   .menu-item {
