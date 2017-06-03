@@ -208,7 +208,7 @@ body {
 		display: flex;
 	}
 
-  .menu-expand-icon:active ~ .menu-item-container { 
+  .menu-item-container:hover { 
 		display: flex;
 	}
 
