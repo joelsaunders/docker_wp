@@ -39,7 +39,7 @@ export default () => {
                 <div className="team-table-cell">
                     <div className="headshot-container">
                         <img className="team-table-picture" src="http://res.cloudinary.com/dceeo2a79/image/upload/v1494528870/15747390_10155086779899410_1032417764450909787_n_m3yl6b.jpg" />
-                        <p><strong>CEO, CTO, CFO, FBI</strong><br/>Joel Saunders</p>
+                        <p><strong>CEO, CTO, CFO, CSV</strong><br/>Joel Saunders</p>
                     </div>
                 </div>
             </div>
