@@ -15,6 +15,10 @@ a {
    font-size: 1rem;
  }
 
+ pre {
+   font-size: 0.8rem;
+ }
+
  html {
   overflow-x: hidden;
   margin-right: calc(-1 * (100vw - 100%));
