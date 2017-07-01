@@ -28,26 +28,6 @@ export default () => {
                             </div>
                         </div>
                     </div>
-                    {/*<table>
-                        <tbody>
-                            <tr>
-                                <td className="contact-logotable-cell">
-                                    <a href="https://www.linkedin.com/in/joel-saunders-266476102/"><i className="fa fa-linkedin"></i></a>
-                                </td>
-                                <td className="contact-logotable-cell">
-                                    <a href="https://github.com/joelsaunders"><i className="fa fa-github"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="contact-logotable-cell">
-                                    <a href="mailto:joel.st.saunders@gmail.com"><i className="fa fa-envelope"></i></a>
-                                </td>
-                                <td className="contact-logotable-cell">
-                                    <a href="#"><i className="fa fa-skype"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>*/}
                 </div>
             </div>
         </div>

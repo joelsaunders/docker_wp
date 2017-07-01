@@ -47,6 +47,15 @@ body {
   min-height: 100%;
 }
 
+@media only screen and (max-width: 743px) {
+  .parent {
+    min-width: 0px;
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
 .title-text {
   padding-bottom: 15px;
 }
@@ -70,7 +79,7 @@ body {
 
 @media only screen and (max-width: 743px) {
     p {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 
     h2 {
@@ -91,7 +100,7 @@ body {
     }
 
     h6 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
 }
 
@@ -203,7 +212,7 @@ body {
 		background: #fff;
     right: 5px;
     top: 60px;
-		width: 500px;
+		/*width: 500px;*/
   }
 
   .menu-expand-icon:hover ~ .menu-item-container { 
@@ -491,6 +500,7 @@ body {
    display: flex;
    flex-grow: 1;
    flex-direction: row;
+   flex-wrap: wrap;
  }
 
  .team-table-col {
