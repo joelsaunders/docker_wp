@@ -15,10 +15,9 @@ class MenuItem extends Component {
     }
 
     render() {
-        console.log(this.props)
         return (
-            <Link to={`/${this.props.title.toLowerCase()}`} className="menu-item" style={{ textDecoration: 'none' }} >
-                <div onClick={this.handleClick} >
+            <Link to={`/${this.props.title.toLowerCase()}`} className="menu-item" style={{ textDecoration: 'none' }} onClick={this.handleClick} >
+                <div >
                     <h6 className="menu-item-text">
                         {this.props.title}
                     </h6>

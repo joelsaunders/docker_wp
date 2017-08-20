@@ -129,6 +129,7 @@ body {
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
+  background: inherit;
 }
 
 .menu-background {
@@ -223,13 +224,9 @@ body {
 		/*width: 500px;*/
   }
 
-  .menu-expand-icon:hover ~ .menu-item-container { 
-		display: flex;
-	}
-
-  .menu-item-container:hover { 
-		display: flex;
-	}
+  .visible {
+    display: flex;
+  }
 
   .menu-item {
     display: flex;

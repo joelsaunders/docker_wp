@@ -32,7 +32,6 @@ class Header extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div className="header" >
                 <NameBox />
@@ -41,7 +40,7 @@ class Header extends Component {
                     <img
                     className="menu-background"
                     src="http://res.cloudinary.com/dceeo2a79/image/upload/v1494168814/400a9c97-21cf-4ecd-9339-b036c29e8790_1_l8hfcw.png" />
-                    <div className="menu-item-container">
+                    <div className={(this.state.menuIsOpen ? "visible " : "") + "menu-item-container"}>
                         {this.renderMenu()}
                     </div>                   
                 </div>                
